@@ -1,0 +1,70 @@
+
+ROM used:   1470/8192 (18%)
+            1470/8192 (18%) including unused fragments
+
+            1.4 Average locations per line
+            16.2 Average locations per statement
+
+RAM used:   18/368 (5%) at main() level
+            43/368 (12%) worst case
+
+Stack used: 4 worst case (4 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   43    23  25  counter.c
+  756     0   0  C:\Program Files (x86)\PICC\Devices\16f886.h
+  233    68  75  flex_lcd011.c
+----- -----
+ 1032    91 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     20   1    1             @delay_ms1
+0      8   1    0    209  3.0  @const599
+0     52   4    1    328  2.7  lcd_send_nibble
+0     45   3    1    362  2.3  lcd_read_nibble
+ Inline         3    165  3.3  lcd_read_byte
+0     61   4    3    319  4.1  lcd_send_byte
+0     48   3    2    384  4.4  lcd_init
+ Inline         4    186  5.5  lcd_gotoxy
+0     52   4    1    275  3.9  lcd_putc
+0    263  18    1    611  5.1  MAIN
+0      5   0    0    603  5.8  @const633
+0     86   6    4             @PSTRINGC7_622
+0     31   2    2    902  5.1  @ITOF
+0      6   0    0    942  5.1  @const640
+0     87   6    5             @PSTRINGCN7_622
+0    117   8   13             @MULFF
+ Inline         5             @FTOSD
+0     79   5   13             @DIV3232
+0    224  15   13             @PRINTF_L32D_622FPFPF
+0    204  14   14             @DIVFF
+0      8   1    0             @const657
+0     65   4   10             @FLT
+0      5   0    0             @const661
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               12
+    Statements              91
+    Comments                169
+    Volume (V)              8514
+    Difficulty (D)          49.3
+    Effort to implement (E) 420081
+    Time to implement (T)   6 hours, 29 minutes
+    Est Delivered Bugs (B)  2
+    Cyclomatic Complexity   11
+    Maintainability (MI)    81
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF  1466  578  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

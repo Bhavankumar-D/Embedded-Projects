@@ -1,0 +1,156 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     rs232_errors
+021     @TRIS_C
+022-025 s
+026-029 f
+02A-02B @sprintf_string
+02C     @PSTRINGCN7_622.P1
+02C-02F @PRINTF_L32D_622FPFPF.P2
+02C-02F @DIVFF.P3
+02C-02D @ITOF.P4
+02C     lcd_init.i
+02C-02F @FLT.P1
+02C     MAIN.@SCRATCH1
+02C     @PSTRINGC7_622.@SCRATCH1
+02D     lcd_init.@SCRATCH1
+02D     @PSTRINGC7_622.@SCRATCH2
+02D     @PSTRINGCN7_622.@SCRATCH1
+02E     @PSTRINGC7_622.@SCRATCH3
+02E     @PSTRINGCN7_622.@SCRATCH2
+02F     @PSTRINGC7_622.@SCRATCH4
+02F     @PSTRINGCN7_622.@SCRATCH3
+030     @PRINTF_L32D_622FPFPF.P1
+030-033 @FLT.P2
+030-033 @DIVFF.P3
+030     @PSTRINGCN7_622.@SCRATCH4
+031     @PRINTF_L32D_622FPFPF.@SCRATCH1
+032     @PRINTF_L32D_622FPFPF.@SCRATCH2
+033     @PRINTF_L32D_622FPFPF.@SCRATCH3
+034     @PRINTF_L32D_622FPFPF.@SCRATCH4
+034     @DIVFF.@SCRATCH1
+034     @FLT.@SCRATCH1
+035     @PRINTF_L32D_622FPFPF.@SCRATCH5
+035     @DIVFF.@SCRATCH2
+035     @FLT.@SCRATCH2
+036     @PRINTF_L32D_622FPFPF.@SCRATCH6
+036     @DIVFF.@SCRATCH3
+037     @PRINTF_L32D_622FPFPF.@SCRATCH7
+037     @DIVFF.@SCRATCH4
+038     @PRINTF_L32D_622FPFPF.@SCRATCH8
+038     @DIVFF.@SCRATCH5
+039-03C @DIV3232.P1
+039-03C @FTOSD.P2
+039     lcd_putc.c
+039-03C @MULFF.P1
+039     @DIVFF.@SCRATCH6
+03A     lcd_gotoxy.x
+03A     @delay_ms1.P1
+03B     lcd_gotoxy.y
+03C     lcd_gotoxy.address
+03D-040 @DIV3232.P1
+03D-040 @MULFF.P2
+03D     lcd_gotoxy.@SCRATCH1
+03D     @FTOSD.@SCRATCH1
+03E     lcd_send_byte.address
+03F     lcd_send_byte.n
+040     lcd_read_byte.low
+040     lcd_send_byte.@SCRATCH1
+041     lcd_send_nibble.nibble
+041     lcd_read_byte.high
+041     @MULFF.@SCRATCH1
+041     @DIV3232.@SCRATCH1
+042.0   lcd_read_nibble.retval_0
+042     lcd_read_nibble.retval
+042.1   lcd_read_nibble.retval_1
+042.2   lcd_read_nibble.retval_2
+042.3   lcd_read_nibble.retval_3
+042     lcd_read_byte.@SCRATCH1
+042     @MULFF.@SCRATCH2
+042     @DIV3232.@SCRATCH2
+043     @MULFF.@SCRATCH3
+043     @DIV3232.@SCRATCH3
+044     @MULFF.@SCRATCH4
+044     @DIV3232.@SCRATCH4
+045     @MULFF.@SCRATCH5
+045     @DIV3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  @const633.call
+000011  @const640.call
+000017  @const657.call
+00001F  @const661.call
+000024  @delay_ms1
+000038  lcd_send_nibble
+00006C  lcd_read_nibble
+000099  lcd_send_byte
+00009D  lcd_read_byte
+0000D6  lcd_init
+000106  lcd_putc
+00011D  lcd_gotoxy
+00013A  @PSTRINGC7_622
+000190  @ITOF
+0001AF  @PSTRINGCN7_622
+000206  @MULFF
+00027B  @DIV3232
+0002CA  @PRINTF_L32D_622FPFPF
+0002F1  @FTOSD
+0003AA  @DIVFF
+000476  @FLT
+0004B7  MAIN
+0004B7  @cinit1
+0004DF  @cinit2
+
+Project Directory:
+    E:\san tech\Bhavankumar D Output\PIC\counter\
+
+Project Files:
+    counter.c                                               [15-Apr-24 15:43  CRC=D73210EF]
+    C:\Program Files (x86)\PICC\Devices\16f886.h            [08-Sep-15 15:15  CRC=B984B608]
+    flex_lcd011.c                                           [15-Apr-24 15:17  CRC=C5F1BA23]
+
+Source signature=1C9A3B3D
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=C8AE
+
+Units:
+    counter (main)
+
+Compiler Settings:
+    Processor:      PIC16F886
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   counter.xsym
+    Errors:      counter.err
+    Ext Symbols: counter.esym
+    INHX8:       counter.hex
+    Symbols:     counter.sym
+    List:        counter.lst
+    Debug/COFF:  counter.cof
+    Project:     counter.ccspjt
+    Call Tree:   counter.tre
+    Statistics:  counter.STA

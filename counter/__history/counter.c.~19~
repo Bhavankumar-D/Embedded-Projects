@@ -1,0 +1,49 @@
+#include <16f886.h>
+#device adc=10
+#use delay(clock=20M)
+#fuses hs,nowdt,nocpd,nolvp,noprotect
+#use rs232(baud=9600,xmit=pin_c6,rcv=pin_c7,parity=N,errors)
+#include "flex_lcd011.c"
+float flevel;
+int v=230;
+#int_rda
+void rda_isr()
+{  
+
+}
+void main()
+{
+
+   delay_ms(500);
+  lcd_init();
+  printf(lcd_putc,"Welcome");
+delay_ms(1000);
+
+   while(1)
+   {
+set_adc_channel(0);
+float sensorvalue=read_adc();
+float f=sensorvalue*(5/1023);
+if(f>=2){
+
+output_high(pin_c4);
+output_high(pin_c5);
+output_low(pin_c6);
+
+printf(lcd_putc,"Fuel level:%f",f);
+delay_ms(500);
+}
+
+
+
+ else if(f<2)
+  {
+  printf(lcd_putc,"\fLow fuel");
+  delay_ms(500);
+  output_low(pin_c4);
+  output_high(pin_c6);
+output_low(pin_c5);
+  }
+   }
+}
+

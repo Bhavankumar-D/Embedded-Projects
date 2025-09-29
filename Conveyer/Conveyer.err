@@ -1,0 +1,12 @@
+*** Error 18 "Conveyer.c" Line 4(10,24): File can not be opened
+    Not in "C:\Program Files (x86)\PICC\Devices\flex_lcdk1.c"
+    Not in "C:\Program Files (x86)\PICC\Drivers\flex_lcdk1.c"
+    Not in source "flex_lcdk1.c"
+    Not in local "flex_lcdk1.c"
+    Not in project "E:\san tech\Bhavankumar D Output\PIC\Conveyer\flex_lcdk1.c"
+*** Error 12 "Conveyer.c" Line 19(10,11): Undefined identifier  -- lcd_init
+*** Error 12 "Conveyer.c" Line 20(13,21): Undefined identifier   lcd_putc
+*** Error 12 "Conveyer.c" Line 42(16,24): Undefined identifier   lcd_putc
+*** Error 12 "Conveyer.c" Line 50(16,24): Undefined identifier   lcd_putc
+*** Error 12 "Conveyer.c" Line 60(15,23): Undefined identifier   lcd_putc
+*** Error 12 "Conveyer.c" Line 71(15,23): Undefined identifier   lcd_putc

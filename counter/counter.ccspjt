@@ -1,0 +1,56 @@
+[PROJECT]
+Target=counter.hex
+Processor_Text=PIC16F886
+CCSVersion=5.049
+Compiler=PCM
+[Target Data]
+FileList=counter.c
+[counter.c]
+Type=4
+[mru-list]
+1=counter.c
+
+[defines]
+buildcount=36
+
+[Opened Files]
+1=counter.c
+t1=1
+Count=1
+2=16F886.h
+t2=1
+3=flex_lcd011.c
+t3=1
+
+[ProjectLog]
+Days=3
+D1=15-04-2024
+D1_L=9
+D1_L1=[50112]Started Editing.
+D1_L2=[50435]Stopped Editing.
+D1_L3=[50985]Started Editing.
+D1_L4=[52789]Stopped Editing.
+D1_L5=[52816]Started Editing.
+D1_L6=[56437]Stopped Editing.
+D1_L7=[56460]Started Editing.
+D1_L8=[56909]Stopped Editing.
+TotalEdit=86
+TotalDebug=0
+D1_E=84
+D1_D=0
+D1_L9=[61986]Project Closed.
+D2=22-04-2024
+D2_L=4
+D2_L1=[55032]Project Opened.
+D2_L2=[56016]Started Editing.
+D2_L3=[56092]Stopped Editing.
+D2_E=2
+D2_D=0
+D2_L4=[56092]Project Closed.
+D3=06-06-2024
+D3_L=2
+D3_L1=[55124]Project Opened.
+D3_L2=[57887]Project Closed.
+[Units]
+Count=1
+1=counter (main)
