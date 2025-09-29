@@ -1,0 +1,149 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @TRIS_C
+021-024 g
+025-028 c
+029-02C tem
+02D-030 a
+031-034 b
+035-038 i
+039-03C sensorvalue
+03D-040 sensorvalue1
+041-044 MAIN.b1
+045-048 MAIN.battery1
+049-04C MAIN.b2
+04D-050 MAIN.battery2
+051-054 @FLT.P1
+051     lcd_init.i
+051-054 @PRINTF_L32D_620FPFPF.P1
+051     @PSTRINGCN7_620.P2
+051-052 @ITOF.P3
+051     MAIN.@SCRATCH1
+052     lcd_init.@SCRATCH1
+052     @PSTRINGCN7_620.@SCRATCH1
+053     @PSTRINGCN7_620.@SCRATCH2
+054     @PSTRINGCN7_620.@SCRATCH3
+055-058 @FLT.P1
+055     @PRINTF_L32D_620FPFPF.P2
+055     @PSTRINGCN7_620.@SCRATCH4
+056     @PRINTF_L32D_620FPFPF.@SCRATCH1
+057     @PRINTF_L32D_620FPFPF.@SCRATCH2
+058     @PRINTF_L32D_620FPFPF.@SCRATCH3
+059     @FLT.@SCRATCH1
+059     @PRINTF_L32D_620FPFPF.@SCRATCH4
+05A     @FLT.@SCRATCH2
+05A     @PRINTF_L32D_620FPFPF.@SCRATCH5
+05B     @PRINTF_L32D_620FPFPF.@SCRATCH6
+05C     @PRINTF_L32D_620FPFPF.@SCRATCH7
+05D     @PRINTF_L32D_620FPFPF.@SCRATCH8
+05E     lcd_putc.c
+05E-061 @FTOSD.P1
+05E-061 @MULFF.P2
+05E-061 @DIV3232.P3
+05F     @delay_ms1.P1
+05F     lcd_gotoxy.x
+060     lcd_gotoxy.y
+061     lcd_gotoxy.address
+062-065 @MULFF.P1
+062-065 @DIV3232.P2
+062     lcd_gotoxy.@SCRATCH1
+062     @FTOSD.@SCRATCH1
+063     lcd_send_byte.address
+064     lcd_send_byte.n
+065     lcd_read_byte.low
+065     lcd_send_byte.@SCRATCH1
+066     lcd_send_nibble.nibble
+066     lcd_read_byte.high
+066     @MULFF.@SCRATCH1
+066     @DIV3232.@SCRATCH1
+067.0   lcd_read_nibble.retval_0
+067     lcd_read_nibble.retval
+067.1   lcd_read_nibble.retval_1
+067.2   lcd_read_nibble.retval_2
+067.3   lcd_read_nibble.retval_3
+067     lcd_read_byte.@SCRATCH1
+067     @MULFF.@SCRATCH2
+067     @DIV3232.@SCRATCH2
+068     @MULFF.@SCRATCH3
+068     @DIV3232.@SCRATCH3
+069     @MULFF.@SCRATCH4
+069     @DIV3232.@SCRATCH4
+06A     @MULFF.@SCRATCH5
+06A     @DIV3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  @const649.call
+000010  @const660.call
+000014  @delay_ms1
+000028  lcd_send_nibble
+000062  lcd_read_nibble
+000093  lcd_send_byte
+000099  lcd_read_byte
+0000DC  lcd_init
+000112  @ITOF
+00012F  @MULFF
+0001A4  @FLT
+0001E3  lcd_putc
+0001FA  lcd_gotoxy
+000217  @PSTRINGCN7_620
+00026E  @DIV3232
+0002BD  @PRINTF_L32D_620FPFPF
+0002E4  @FTOSD
+00039D  MAIN
+00039D  @cinit1
+0003B5  @cinit2
+
+Project Directory:
+    E:\san tech\Bhavankumar D Output\PIC\2 battery\
+
+Project Files:
+    2 battery.c                                             [10-Apr-24 16:30  CRC=83BC5143]
+    C:\Program Files (x86)\PICC\Devices\16f877a.h           [08-Sep-15 15:15  CRC=B168AC0E]
+    flex_lcd.c                                              [03-Apr-24 11:59  CRC=C5F1BA23]
+
+Source signature=C1087197
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=6370
+
+Units:
+    2 battery (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   2 battery.xsym
+    Errors:      2 battery.err
+    Ext Symbols: 2 battery.esym
+    INHX8:       2 battery.hex
+    Symbols:     2 battery.sym
+    List:        2 battery.lst
+    Debug/COFF:  2 battery.cof
+    Project:     2 battery.ccspjt
+    Call Tree:   2 battery.tre
+    Statistics:  2 battery.STA

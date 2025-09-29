@@ -1,0 +1,68 @@
+[PROJECT]
+Target=2 battery.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.049
+Compiler=PCM
+[Target Data]
+FileList=2 battery.c
+[2 battery.c]
+Type=4
+[mru-list]
+1=2 battery.c
+
+[defines]
+buildcount=31
+
+[ProjectLog]
+Days=3
+D1=10-04-2024
+D1_L=15
+D1_L1=[54244]Started Editing.
+D1_L2=[55278]Stopped Editing.
+D1_L3=[55662]Started Editing.
+D1_L4=[56343]Stopped Editing.
+D1_L5=[56420]Started Editing.
+D1_L6=[57604]Stopped Editing.
+D1_L7=[57667]Started Editing.
+D1_L8=[57988]Stopped Editing.
+D1_L9=[58335]Started Editing.
+D1_L10=[58640]Stopped Editing.
+D1_L11=[58754]Started Editing.
+D1_L12=[59312]Stopped Editing.
+D1_L13=[59322]Started Editing.
+D1_L14=[59447]Stopped Editing.
+TotalEdit=55
+TotalDebug=0
+D1_E=41
+D1_D=0
+D1_L15=[59447]Project Closed.
+D2=13-04-2024
+D2_L=4
+D2_L1=[35850]Project Opened.
+D2_L2=[36209]Started Editing.
+D2_L3=[36725]Stopped Editing.
+D2_E=9
+D2_D=0
+D2_L4=[36725]Project Closed.
+D3=01-08-2024
+D3_L=8
+D3_L1=[48501]Project Opened.
+D3_L2=[48598]Started Editing.
+D3_L3=[48846]Stopped Editing.
+D3_E=5
+D3_D=0
+D3_L4=[48846]Project Closed.
+D3_L5=[48856]Project Opened.
+D3_L6=[48856]Project Closed.
+D3_L7=[48857]Project Opened.
+D3_L8=[48870]Project Closed.
+
+[Opened Files]
+1=led.c
+t1=1
+Count=1
+2=led.c
+t2=13
+[Units]
+Count=1
+1=2 battery (main)

@@ -1,0 +1,42 @@
+[PROJECT]
+Target=led.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.049
+Compiler=PCM
+[Target Data]
+FileList=led.c
+[led.c]
+Type=4
+[mru-list]
+1=led.c
+
+[defines]
+buildcount=4
+
+[ProjectLog]
+Days=1
+D1=01-08-2024
+D1_L=7
+D1_L1=[49134]Started Editing.
+D1_L2=[49401]Stopped Editing.
+TotalEdit=6
+TotalDebug=0
+D1_E=6
+D1_D=0
+D1_L3=[49401]Project Closed.
+D1_L4=[49877]Project Opened.
+D1_L5=[49965]Started Editing.
+D1_L6=[50270]Stopped Editing.
+D1_L7=[57558]Project Closed.
+
+[Opened Files]
+1=led.c
+t1=1
+2=flex_lcd.c
+t2=180
+Count=3
+3=led.tre
+t3=-1
+[Units]
+Count=1
+1=led (main)
