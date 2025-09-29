@@ -1,0 +1,44 @@
+[PROJECT]
+Target=RTOS.hex
+Processor_Text=PIC16F887
+CCSVersion=5.049
+Compiler=PCM
+[Target Data]
+FileList=RTOS.c
+[RTOS.c]
+Type=4
+[mru-list]
+1=RTOS.c
+
+[defines]
+buildcount=35
+
+[Opened Files]
+1=RTOS.c
+t1=1
+Count=2
+2=flex_lcdk1.c
+t2=5
+
+[ProjectLog]
+Days=1
+D1=14-05-2024
+D1_L=15
+D1_L1=[36311]Stopped Editing.
+D1_L2=[36842]Started Editing.
+D1_L3=[37826]Stopped Editing.
+D1_L4=[37915]Started Editing.
+D1_L5=[38982]Stopped Editing.
+D1_L6=[42636]Started Editing.
+D1_L7=[43262]Stopped Editing.
+D1_L8=[43498]Started Editing.
+D1_L9=[43975]Stopped Editing.
+D1_L10=[44025]Started Editing.
+D1_L11=[44428]Stopped Editing.
+D1_L12=[45333]Started Editing.
+D1_L13=[46046]Stopped Editing.
+D1_L14=[50360]Started Editing.
+D1_L15=[50789]Stopped Editing.
+[Units]
+Count=1
+1=RTOS (main)

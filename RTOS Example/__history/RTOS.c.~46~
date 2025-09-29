@@ -1,0 +1,51 @@
+#include <16F887.h>
+#fuses NOMCLR, NOBROWNOUT, NOLVP, INTRC_IO
+#use delay(clock = 4MHz)
+#use fast_io(B)
+#use rtos(timer = 0, minor_cycle = 50ms)
+#use rs232(baud=9600, xmit=pin_c6, rcv=pin_c7, bits=8,parity=N, ERRORS)
+#include "flex_lcdk1.c"
+float s=0;
+float g;
+
+#task(rate = 100ms, max = 10ms) // 1st RTOS task (executed every 250ms)
+void ADC(){
+set_adc_channel(12);
+delay_ms(10);
+g = read_adc(); 
+delay_ms(10);
+//g=5*(g/1023);
+delay_ms(10);
+printf(lcd_putc,"\fvalue= %f",g);
+delay_ms(100);
+
+}
+#task(rate = 100ms, max = 10ms) // 2nd RTOS task (executed every 500ms)
+void led(){
+if(input(pin_c3)==1)
+{
+  output_toggle(PIN_D1);
+}else {
+output_low(PIN_D1);
+}
+}
+#task(rate = 1000ms, max = 10ms) // 3rd RTOS task (executed every 750ms)
+void led3(){
+s=g+1;
+printf(lcd_putc,"\nvalue2= %f",s);
+delay_ms(500);
+}
+
+void main()
+{
+lcd_init(); 
+setup_adc(ADC_CLOCK_INTERNAL); // initialize ADC with a sampling rate of Crystal/4 MHz
+   setup_adc_ports(CP2_B3_A2); // set PIN_A0 as analog input channel
+delay_ms(5);
+printf(lcd_putc,"\fwelcome");
+delay_ms(1000); 
+setup_oscillator(OSC_4MHZ); // Set the internal oscillator to 8MHz
+ // output_b(0); // All PORTB register pins are zeros
+  //set_tris_b(0); // Configure PORTB pins as outputs
+  rtos_run(); // Start all the RTOS tasks
+}
