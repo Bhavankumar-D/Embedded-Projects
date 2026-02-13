@@ -1,0 +1,47 @@
+[PROJECT]
+Target=Cruise.hex
+Processor_Text=PIC16F886
+CCSVersion=5.049
+Compiler=PCM
+[Target Data]
+FileList=Cruise.c
+[Cruise.c]
+Type=4
+[mru-list]
+1=Cruise.c
+
+[defines]
+buildcount=7
+
+[ProjectLog]
+Days=2
+D1=23-04-2024
+D1_L=8
+D1_L1=[33233]Stopped Editing.
+D1_L2=[33561]Started Editing.
+D1_L3=[33861]Stopped Editing.
+D1_L4=[34799]Started Editing.
+D1_L5=[35647]Stopped Editing.
+D1_L6=[36019]Started Editing.
+D1_L7=[36106]Stopped Editing.
+TotalEdit=11
+TotalDebug=0
+D1_E=11
+D1_D=0
+D1_L8=[36106]Project Closed.
+D2=15-06-2024
+D2_L=4
+D2_L1=[46563]Project Opened.
+D2_L2=[52285]Project Closed.
+D2_L3=[52752]Project Opened.
+D2_L4=[52764]Project Closed.
+
+[Opened Files]
+1=Cruise.c
+t1=9
+Count=2
+2=flex_lcd.c
+t2=1
+[Units]
+Count=1
+1=Cruise (main)
