@@ -1,0 +1,66 @@
+
+ROM used:   1296/8192 (16%)
+            1296/8192 (16%) including unused fragments
+
+            1.3 Average locations per line
+            12.3 Average locations per statement
+
+RAM used:   55/368 (15%) at main() level
+            80/368 (22%) worst case
+
+Stack used: 4 worst case (4 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   58    37  35  2 battery.c
+  674     0   0  C:\Program Files (x86)\PICC\Devices\16f877a.h
+  233    68  65  flex_lcd.c
+----- -----
+  965   105 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     20   2    1             @delay_ms1
+0      8   1    0             @const597
+0     58   4    1    328  2.7  lcd_send_nibble
+0     49   4    1    362  2.3  lcd_read_nibble
+ Inline         3    165  3.3  lcd_read_byte
+0     73   6    3    319  4.1  lcd_send_byte
+0     54   4    2    384  4.4  lcd_init
+ Inline         4    186  5.5  lcd_gotoxy
+0     52   4    1    275  3.9  lcd_putc
+0    371  29   17   1129  5.4  MAIN
+0     29   2    2             @ITOF
+0    117   9   13             @MULFF
+0     63   5   10             @FLT
+0      4   0    0             @const649
+0     87   7    5             @PSTRINGCN7_620
+ Inline         5             @FTOSD
+0     79   6   13             @DIV3232
+0    224  17   13             @PRINTF_L32D_620FPFPF
+0      4   0    0             @const660
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               8
+    Statements              105
+    Comments                160
+    Volume (V)              4761
+    Difficulty (D)          30.3
+    Effort to implement (E) 144392
+    Time to implement (T)   2 hours, 14 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   11
+    Maintainability (MI)    126
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF  1292  752  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

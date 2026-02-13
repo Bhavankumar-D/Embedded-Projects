@@ -1,0 +1,55 @@
+#include <16f877a.h>
+#FUSES hs,NOWDT,PUT,PROTECT,NOBROWNOUT,NOLVP,NOCPD
+#device adc=10
+#use delay(clock=20000000)
+#include "flex_lcd.c"
+float g,c,tem,a,b;
+float i=0;
+float sensorvalue=0;
+float sensorvalue1=0;
+void main()
+ 
+{
+
+
+
+setup_adc(ADC_CLOCK_INTERNAL); // initialize ADC with a sampling rate of Crystal/4 MHz
+setup_adc_ports(ALL_ANALOG  );   // set PIN_A0 as analog input channel
+delay_ms(5);
+lcd_init();
+delay_ms(1000);
+
+
+  while(1)
+  {
+  set_adc_channel(0);
+sensorvalue=read_adc();
+delay_ms(100);
+set_adc_channel(1);
+sensorvalue1=read_adc();
+delay_ms(100);
+float b1=(sensorvalue*(5.0/1023.0));
+delay_ms(100);
+float battery1=b1*2.4;
+delay_ms(100);
+float b2=(sensorvalue1*(5.0/1023.0));
+delay_ms(100);
+float battery2=b2*2.4;
+delay_ms(100);
+if(battery2<=11.00){
+output_high(pin_d0);
+printf(lcd_putc,"\fB1:%f",battery1);
+delay_ms(100);
+printf(lcd_putc,"\nB2:%f",battery2);
+delay_ms(100);
+}
+else if(battery1<=11.00){
+output_low(pin_d0);
+printf(lcd_putc,"\fB1:%f",battery1);
+delay_ms(100);
+printf(lcd_putc,"\nB2:%f",battery2);
+delay_ms(100);
+}
+  }
+}
+
