@@ -1,0 +1,118 @@
+#include <16f886.h>
+#device adc=10
+#use delay(clock=20M)
+#include "flex_lcd.c"
+#fuses hs,nowdt,nocpd,nolvp,noprotect
+#use rs232(baud=9600, xmit=PIN_C6, rcv=PIN_C7, ERRORS)
+char z;
+unsigned int16 y[5];
+int u=0,l=0,d=0,s=0,w=0,a=0;
+float p=0;
+void main()
+{  
+setup_adc(ADC_CLOCK_INTERNAL);
+setup_adc_ports(CP1_A0_VREF);
+setup_adc_ports(CP2_A1_A2);
+
+  //lcd_init();
+  printf("\fwelcome");
+  delay_ms(1000);
+  a=1;
+   while(a)
+   {
+   s=1;
+    d=0;
+      y[d]=0;
+   while(s)
+   {
+   output_low(pin_c4);
+   printf("\f Set Tempreature");
+   z=getch(); 
+ if(z=='0')
+   {
+   l=0;
+   }
+   if(z=='1')
+   {
+   l=1;
+   }
+   if(z=='2')
+   {
+   l=2;
+   }
+   if(z=='3')
+   {
+   l=3;
+   }
+   if(z=='4')
+   {
+   l=4;
+   }
+   if(z=='5')
+   {
+   l=5;
+   }
+   if(z=='6')
+   {
+   l=6;
+   }
+   if(z=='7')
+   {
+   l=7;
+   }
+   if(z=='8')
+   {
+   l=8;
+   }
+   if(z=='9')
+   {
+   l=9;
+   }
+  
+ if(d<2)
+   {
+   y[d]=l;
+   d++;
+   
+  delay_ms(100);
+   }
+  else
+  {
+  s=0;
+  }  
+  }
+  printf("\n%ld%ld%ld",y[0],y[1],y[2]);
+  delay_ms(100);
+  
+  float tempreature=((y[0]*100)+(y[1]*10)+(y[2]*1));
+  printf("\f%f",tempreature);
+  delay_ms(1000);
+  u=1;
+  while(u){
+set_adc_channel(0);
+delay_ms(10);
+float v = read_adc();
+delay_ms(10);
+p=100*(v/1023);
+printf("\f%f",p);
+delay_ms(10);
+w=1;
+s=0;
+  
+while(w){
+if(p==tempreature){
+output_high(pin_c4);
+delay_ms(1000);
+}
+if(input(pin_a1)==1){
+w=0;
+u=0;
+s=1;
+}
+  }
+
+  
+   
+}
+}
+}

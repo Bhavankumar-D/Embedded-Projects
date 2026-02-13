@@ -1,0 +1,48 @@
+[PROJECT]
+Target=incubator.hex
+Processor_Text=PIC16F886
+CCSVersion=5.049
+Compiler=PCM
+[Target Data]
+FileList=incubator.c
+[incubator.c]
+Type=4
+[mru-list]
+1=incubator.c
+
+[defines]
+buildcount=47
+
+[ProjectLog]
+Days=2
+D1=18-04-2024
+D1_L=4
+D1_L1=[59926]Stopped Editing.
+D1_L2=[60158]Started Editing.
+D1_L3=[60666]Stopped Editing.
+TotalEdit=5
+TotalDebug=0
+D1_E=5
+D1_D=0
+D1_L4=[61256]Project Closed.
+D2=22-04-2024
+D2_L=9
+D2_L1=[32695]Project Opened.
+D2_L2=[32773]Started Editing.
+D2_L3=[33116]Stopped Editing.
+D2_L4=[33149]Started Editing.
+D2_L5=[34858]Stopped Editing.
+D2_L6=[35432]Started Editing.
+D2_L7=[39426]Stopped Editing.
+D2_L8=[39430]Started Editing.
+D2_L9=[39730]Stopped Editing.
+
+[Opened Files]
+1=incubator.c
+t1=81
+Count=2
+2=flex_lcd.c
+t2=1
+[Units]
+Count=1
+1=incubator (main)
