@@ -1,0 +1,105 @@
+#include <16F877a.h>
+#device adc=10
+#fuses HS,NOWDT,NOPROTECT,BROWNOUT,PUT
+#use delay(clock=20000000)
+#use rs232(baud=9600,xmit=PIN_c6, rcv=PIN_C7, ERRORS)
+float flow=0;
+float s=0,oh=0;
+float g=0,h=0,i=0;
+void overhead();
+void conversion();
+void light();
+void main(){
+setup_adc(ADC_CLOCK_INTERNAL);
+setup_adc_ports(ALL_ANALOG);
+delay_ms(100);
+printf("Hello");
+delay_ms(500);
+while(1){
+conversion();
+light();
+if(input(pin_B4)==0){
+output_high(pin_c4);
+if(flow>=80 && s>=40){
+overhead();
+}
+else{
+output_low(pin_B0);
+}
+}
+if(input(pin_B4)==1){
+printf("\f Manual");
+delay_ms(500);
+output_high(pin_c3);
+overhead();
+}
+}
+}
+void overhead(){
+if(oh>=90){
+printf("\f Tank Full");
+delay_ms(100);
+output_high(pin_B7);
+output_low(pin_B0);
+}
+else{
+printf("\f Tank Filling");
+delay_ms(100);
+output_high(pin_B0);
+output_low(pin_B7);
+}
+}
+void conversion(){
+set_adc_channel(0);
+g = read_adc(); 
+flow=100*(g/1023);
+delay_ms(100);
+set_adc_channel(1);
+h = read_adc(); 
+s=100*(h/1023);
+delay_ms(100);
+set_adc_channel(2);
+i = read_adc(); 
+oh=100*(i/1023);
+delay_ms(100);
+}
+void light(){
+if(s>=90){
+output_high(pin_B1);
+output_high(pin_B2);
+output_high(pin_B3);
+delay_ms(100);
+}
+if(s>=45 && s<90){
+output_low(pin_B1);
+output_high(pin_B2);
+output_high(pin_B3);
+delay_ms(100);
+}
+if(s>=10 && s<45){
+output_low(pin_B1);
+output_low(pin_B2);
+output_high(pin_B3);
+delay_ms(100);
+}
+if(oh>=90){
+output_high(pin_C2);
+output_high(pin_C1);
+output_high(pin_C0);
+delay_ms(100);
+}
+if(oh>=45 && oh<90){
+output_low(pin_C2);
+output_high(pin_C1);
+output_high(pin_C0);
+delay_ms(100);
+}
+if(oh>=10 && oh<45){
+output_low(pin_C2);
+output_low(pin_C1);
+output_high(pin_C0);
+delay_ms(100);
+}
+
+
+}

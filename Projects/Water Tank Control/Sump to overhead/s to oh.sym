@@ -1,0 +1,107 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     rs232_errors
+021-024 flow
+025-028 s
+029-02C oh
+02D-030 g
+031-034 h
+035-038 i
+039-03A @sprintf_string
+03B     @TRIS_C
+03C-03D @ITOF.P1
+03C-03F @DIVFF.P2
+03C-03F @FLT.P3
+03C-03F @MULFF.P4
+03C     main.@SCRATCH1
+03C     @PSTRINGC7_9600_62_63.@SCRATCH1
+03D     @delay_ms1.P1
+03D     @PSTRINGC7_9600_62_63.@SCRATCH2
+03E     @PSTRINGC7_9600_62_63.@SCRATCH3
+03F     @PSTRINGC7_9600_62_63.@SCRATCH4
+040-043 @FLT.P1
+040-043 @MULFF.P2
+040-043 @DIVFF.P3
+044     @FLT.@SCRATCH1
+044     @DIVFF.@SCRATCH1
+044     @MULFF.@SCRATCH1
+045     @FLT.@SCRATCH2
+045     @DIVFF.@SCRATCH2
+045     @MULFF.@SCRATCH2
+046     @DIVFF.@SCRATCH3
+046     @MULFF.@SCRATCH3
+047     @DIVFF.@SCRATCH4
+047     @MULFF.@SCRATCH4
+048     @DIVFF.@SCRATCH5
+048     @MULFF.@SCRATCH5
+049     @DIVFF.@SCRATCH6
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const613.call
+000007  @const622.call
+00000C  @const623.call
+000012  @const624.call
+00001A  @delay_ms1
+00002E  @PSTRINGC7_9600_62_63
+000086  @ITOF
+0000A3  @DIVFF
+00016D  @MULFF
+0001E2  conversion
+0002B1  @FLT
+0002F0  light
+000415  overhead
+00044E  @cinit1
+00044E  main
+00047D  @cinit2
+
+Project Directory:
+    E:\san tech\Bhavankumar D Output\PIC\Sump to overhead\
+
+Project Files:
+    s to oh.c                                               [18-Jun-24 17:27  CRC=4B6F7D7F]
+    C:\Program Files (x86)\PICC\Devices\16F877a.h           [08-Sep-15 15:15  CRC=B168AC0E]
+
+Source signature=AE40D59B
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=93EC
+
+Units:
+    s to oh (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   s to oh.xsym
+    Errors:      s to oh.err
+    Ext Symbols: s to oh.esym
+    INHX8:       s to oh.hex
+    Symbols:     s to oh.sym
+    List:        s to oh.lst
+    Debug/COFF:  s to oh.cof
+    Project:     s to oh.ccspjt
+    Call Tree:   s to oh.tre
+    Statistics:  s to oh.STA

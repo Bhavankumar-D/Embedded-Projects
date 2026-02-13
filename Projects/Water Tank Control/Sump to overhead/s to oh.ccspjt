@@ -1,0 +1,53 @@
+[PROJECT]
+Target=s to oh.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.049
+Compiler=PCM
+[Target Data]
+FileList=s to oh.c
+[s to oh.c]
+Type=4
+[mru-list]
+1=s to oh.c
+
+[defines]
+buildcount=85
+
+[Opened Files]
+1=s to oh.c
+t1=17
+Count=1
+
+[ProjectLog]
+Days=1
+D1=18-06-2024
+D1_L=22
+D1_L1=[40135]Stopped Editing.
+D1_L2=[41738]Started Editing.
+D1_L3=[42453]Stopped Editing.
+D1_L4=[42764]Started Editing.
+D1_L5=[43375]Stopped Editing.
+D1_L6=[43728]Started Editing.
+D1_L7=[45657]Stopped Editing.
+D1_L8=[50152]Started Editing.
+D1_L9=[51338]Stopped Editing.
+D1_L10=[51583]Started Editing.
+D1_L11=[52200]Stopped Editing.
+D1_L12=[52235]Started Editing.
+D1_L13=[53916]Stopped Editing.
+D1_L14=[60660]Started Editing.
+D1_L15=[60711]Stopped Editing.
+TotalEdit=148
+TotalDebug=0
+D1_E=148
+D1_D=0
+D1_L16=[60711]Project Closed.
+D1_L17=[60732]Project Opened.
+D1_L18=[60770]Started Editing.
+D1_L19=[61210]Stopped Editing.
+D1_L20=[61347]Started Editing.
+D1_L21=[62972]Stopped Editing.
+D1_L22=[62978]Project Closed.
+[Units]
+Count=1
+1=s to oh (main)
